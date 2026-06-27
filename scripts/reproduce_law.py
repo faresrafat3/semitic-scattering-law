@@ -8,10 +8,9 @@ import os
 def simulate_neural_lift(scatter, model_type="RNN"):
     if model_type == "RNN":
         base_lift = 0.402 - 0.109 * scatter
-    else: # Transformer
-        base_//S_simulate_neural_lift = 0.550 - 0.085 * scatter # Typo fix
+    else:  # Transformer
         base_lift = 0.550 - 0.085 * scatter
-    
+
     noise = np.random.normal(0, 0.04)
     return max(0, base_lift + noise)
 
